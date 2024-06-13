@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <script src="../js/pessoal.js"></script>
+    <title>Tarefas Pessoais</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+        <div class="sidebar-brand">
+                <h2><span class="lab la-accusoft"></span> ToDo List</h2>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="../html/Home.html" class="active"><span class="las la-igloo"></span>
+                    <span>Home</span></a>
+                </li>
+                <li>
+                    <a href="../html/Pessoal.html"><span class="las la-users"></span>
+                    <span>Pessoal</span></a>
+                </li>
+                <li>
+                    <a href="../html/Profissional.html"><span class="las la-clipboard-list"></span>
+                    <span>Profissional</span></a>
+                </li>
+                <li>
+                    <a href="../html/Compras.html"><span class="las la-shopping-bag"></span>
+                    <span>Compras</span></a>
+                </li>
+                <li>
+                    <a href="../html/Rapidas.html"><span class="las la-receipt"></span>
+                    <span>Rápidas</span></a>
+                </li>
+                <li>
+                    <a href="../html/Academica.html"><span class="las la-clipboard-list"></span>
+                    <span>Acadêmica</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>
+                <label for="nav-toggle">
+                    <span class="las la-bars">
+
+                    </span>
+                </label>
+                Dashboard
+            </h1>
+
+            <div class="search-wrapper">
+                <span class="las la-search">
+                    <input type="search" id="pesquisa" placeholder="Procure aqui"/>
+                </span>
+            </div>
+
+            <div class="user-wrapper">
+                <img src="img/2.jpg" alt="" width="30px" height="30px">
+                <div>
+                    <h4>Nathalia Rabelo</h4>
+                    <small>Criadora</small>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <div class="container">
+                <div class="box" id="lado-esquerdo">
+                    <label for="titulo">Título:<br></label>
+                    <input id="titulo" type="text"><br>
+                    <label for="datavencimento">Data de Vencimento:<br></label>
+                    <input id="datavencimento" type="date"><br>
+                    <label for="status">Status:<br></label>
+                    <select id="status">
+                        <option value="Pendente">Pendente</option>
+                        <option value="Encerrada">Encerrada</option>
+                    </select>
+                </div>
+                
+                <div class="box" id="lado-direito">
+                    <label for="descricao">Descrição:<br></label>
+                    <input id="descricao" type="text"><br>
+                    <label for="prioridade">Prioridade:<br></label>
+                    <select id="prioridade">
+                        <option value="Baixa">Baixa</option>
+                        <option value="Média">Média</option>
+                        <option value="Alta">Alta</option>
+                    </select>
+                    <label for="categoria">Categoria:<br></label>
+                    <input id="categoria" type="text"><br>
+                </div>
+            </div>
+
+            <div class="tasks-buttons">
+                <div id="mensagem" style="display:none;"></div>
+                <button id="btnAdicionarTarefa" type="button">ADICIONAR TAREFA</button>
+                <button id="btnCancelar" type="button">LIMPAR</button>
+            </div>
+
+            <div class="recent-grid">
+                <div class="projects">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Tarefas</h3>
+
+                            <button>See all <span class="las la-arrow-right"></span></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="tabela"  style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <td>ID</td>
+                                            <td>Título</td>
+                                            <td>Descrição</td>
+                                            <td>Data</td>
+                                            <td>Status</td>
+                                            <td>Categoria</td>
+                                            <td>Ações</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </main>
+    </div>
+</body>
+</html>
